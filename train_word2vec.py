@@ -10,7 +10,7 @@ def load_stopwords(stopwords_file):
     return stopwords
 
 # 加载停词表
-stopwords = load_stopwords('data/stopwords.txt')
+stopwords = load_stopwords('data/token/stopwords.txt')
 
 # 读取地址数据
 with open('data/train_word2vec/shenzhen_corpus.txt', 'r', encoding='utf-8') as f:
@@ -45,10 +45,10 @@ for address in tokenized_addresses:
 model = Word2Vec(sentences=tokenized_addresses, vector_size=100, window=5, min_count=1, workers=4)
 
 # 保存模型
-model.save('word2vec.model')
+model.save('/data/word2vec.model')
 
 # 保存字典
-with open('word_dict.json', 'w', encoding='utf-8') as f:
+with open('data/token/word_dict.json', 'w', encoding='utf-8') as f:
     json.dump(word_dict, f, ensure_ascii=False, indent=4)
 
 print("训练完成，模型和字典已保存。")

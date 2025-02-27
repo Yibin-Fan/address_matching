@@ -1,0 +1,11 @@
+Experiment record:
+    Model: word2vec
+    Configuration:
+        BATCH_SIZE = 32
+        NUM_EPOCHS = 50
+        LEARNING_RATE = 0.0001
+        MAX_LEN = 128
+    Best Results:
+        Validation Precision: 0.9839
+        Validation Recall: 0.9884
+        Validation F1: 0.9861
