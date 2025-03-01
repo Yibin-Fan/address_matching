@@ -23,9 +23,9 @@ def tokenize_and_index(text, stopwords, dictionary):
             indexed_words.append(dictionary[word])
     return indexed_words
 
-stopwords = load_stopwords('data/token/stopwords.txt')
+stopwords = load_stopwords('data/corpus/stopwords.txt')
 
-dictionary = load_dict('data/token/word_dict.json')
+dictionary = load_dict('results/word2vec/word_dict.json')
 
 # 读取数据
 input_dir = ['train', 'test', 'dev']
