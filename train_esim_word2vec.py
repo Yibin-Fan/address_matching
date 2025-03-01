@@ -179,16 +179,16 @@ def main():
 
     # Load datasets
     train_dataset = TextMatchDataset(
-        'data/train/addr1_tokenized.txt',
-        'data/train/addr2_tokenized.txt',
-        'data/train/labels.txt',
+        'data/word2vec_dataset/train/addr1_tokenized.txt',
+        'data/word2vec_dataset/train/addr2_tokenized.txt',
+        'data/word2vec_dataset/train/labels.txt',
         max_len=MAX_LEN
     )
 
     val_dataset = TextMatchDataset(
-        'data/test/addr1_tokenized.txt',
-        'data/test/addr2_tokenized.txt',
-        'data/test/labels.txt',
+        'data/word2vec_dataset/test/addr1_tokenized.txt',
+        'data/word2vec_dataset/test/addr2_tokenized.txt',
+        'data/word2vec_dataset/test/labels.txt',
         max_len=MAX_LEN
     )
 
@@ -196,7 +196,7 @@ def main():
     val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE)
 
     # Load word embeddings
-    word2vec_matrix, vocab_size = load_word2vec_matrix("data/model/word2vec.model")
+    word2vec_matrix, vocab_size = load_word2vec_matrix("results/word2vec/word2vec.model")
     embedding_dim = word2vec_matrix.shape[1]
 
     # Initialize model
@@ -220,7 +220,7 @@ def main():
         optimizer=optimizer,
         num_epochs=NUM_EPOCHS,
         device=DEVICE,
-        save_path='data/model/best_esim_model.pth'
+        save_path='results/word2vec/best_esim_model.pth'
     )
 
     logger.info("Training completed. Training history plot saved as 'result.png'")
