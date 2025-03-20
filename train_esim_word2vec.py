@@ -186,9 +186,9 @@ def main():
     )
 
     val_dataset = TextMatchDataset(
-        'data/word2vec_dataset/test/addr1_tokenized.txt',
-        'data/word2vec_dataset/test/addr2_tokenized.txt',
-        'data/word2vec_dataset/test/labels.txt',
+        'data/word2vec_dataset/val/addr1_tokenized.txt',
+        'data/word2vec_dataset/val/addr2_tokenized.txt',
+        'data/word2vec_dataset/val/labels.txt',
         max_len=MAX_LEN
     )
 

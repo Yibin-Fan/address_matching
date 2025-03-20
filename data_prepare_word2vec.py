@@ -28,7 +28,7 @@ stopwords = load_stopwords('data/corpus/stopwords.txt')
 dictionary = load_dict('results/word2vec/word_dict.json')
 
 # 读取数据
-input_dir = ['train', 'test', 'dev']
+input_dir = ['train', 'test', 'val']
 
 for input in input_dir:
     input_file = 'data/' + input + '/address.txt'

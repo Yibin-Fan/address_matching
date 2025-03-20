@@ -6,6 +6,10 @@ Experiment record:
         LEARNING_RATE = 0.0001
         MAX_LEN = 128
     Best Results:
-        Validation Precision: 0.9839
-        Validation Recall: 0.9884
-        Validation F1: 0.9861
+        Validation Precision: 0.9825
+        Validation Recall: 0.9906
+        Validation F1: 0.9865
+    Results on test set:
+        Precision: 0.9819
+        Recall: 0.9879
+        F1: 0.9849
